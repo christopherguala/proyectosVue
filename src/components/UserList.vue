@@ -1,0 +1,40 @@
+<script setup>
+    let usuarios = [];
+    class Usuario {
+        constructor(id, nombre, edad, rut) {
+            this.id = id;
+            this.nombre = nombre;
+            this.edad = edad;
+            this.rut = rut;
+            usuarios.push(this);
+        }
+    }
+
+    new Usuario(1, "Juan", 20, "12.345.678-9");
+    new Usuario(2, "Pedro", 25, "23.456.789-0");
+    new Usuario(3, "Maria", 30, "34.567.890-1");
+    new Usuario(4, "Luis", 35, "45.678.901-2");
+    new Usuario(5, "Ana", 40, "56.789.012-3");
+</script>
+<template> 
+    <div class="container mt-4">
+    <table class="table table-dark table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Rut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="usuario in usuarios" :key="usuario.id">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.edad }}</td>
+          <td>{{ usuario.rut }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
