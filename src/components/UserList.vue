@@ -7,10 +7,11 @@ import { ref } from 'vue'
             this.nombre = nombre;
             this.edad = edad;
             this.rut = rut;
+            //se elimina el this push o la pagina se iba a blanco xd
         }
     }
 
-    usuarios.value.push(
+    usuarios.value.push( // ahora se puchea con .value
     new Usuario(1, "Juan", 20, "12.345.678-9"),
     new Usuario(2, "Pedro", 25, "23.456.789-0"),
     new Usuario(3, "Maria", 30, "34.567.890-1"),
@@ -28,7 +29,7 @@ import { ref } from 'vue'
     const rut = prompt('Ingrese RUT:')
     if (!rut) return
 
-    const nuevoId =
+    const nuevoId = 
         usuarios.value.length > 0
             ? Math.max(...usuarios.value.map((u) => u.id)) + 1
             : 1
