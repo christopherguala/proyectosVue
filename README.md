@@ -8,4 +8,5 @@ La tarea numero 1 es la tarea numero 2 tambien.
 Para la tarea numero 2 del modulo debe cambiar en el template de app.vue a <Userlist />
 Para la tarea nuemero 3 debe cambiarlo a <Characters />
 para la tarea abp ae3 se isa <Seleccion />
+tarea abp ae4 se usa <Pokemones />
 
